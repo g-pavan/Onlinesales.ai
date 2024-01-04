@@ -1,0 +1,41 @@
+Task 2: Evaluate Multiple Mathematical Expressions Using a Web API
+
+Approach:
+1. Read mathematical expressions from a text file.
+2. Initialize an aiohttp ClientSession to handle HTTP requests to the API.
+3. Send a batch of expressions to the math.js API for evaluation.
+4. Print the results of each expression on the console.
+5. Measure the total execution time for evaluating all expressions.
+
+Code Explanation:
+- The code begins by defining the 'evaluate_expressions' function for making API requests.
+- The 'main' function serves as the entry point for the application.
+- Mathematical expressions are read from a text file line by line until "end" is encountered.
+- Expressions are collected in a list for batch evaluation.
+- The 'evaluate_expressions' function sends a POST request to the API with the list of expressions.
+- The API responds with evaluated results for each expression, which are printed on the console.
+- The execution time is measured to evaluate the performance of the application.
+
+Handling 'end' Separator:
+- The code handles the 'end' separator to evaluate expressions in sets.
+- Expressions are collected until 'end' is encountered in the text file.
+- When 'end' is found, the expressions collected so far are sent for evaluation.
+- This allows for efficient processing of a large number of expressions.
+
+Performance Metrics:
+- The code calculates the total execution time to evaluate all expressions.
+- This provides insights into how efficiently the application processes requests.
+
+To Run the Code:
+- Ensure that you have Python installed and aiohttp library available.
+- Create a 'expressions.txt' file with mathematical expressions.
+- Run the code, and it will read and evaluate expressions from the file.
+
+Task Completion:
+- The code successfully evaluates mathematical expressions using the math.js API.
+- It handles 'end' separators, making it suitable for processing a large number of expressions.
+
+Improvements:
+- To enhance performance, consider parallelizing requests or using a dedicated math library for local evaluation.
+- Implement error handling for API requests and responses.
+

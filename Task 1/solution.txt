@@ -1,0 +1,56 @@
+Task 1: Simulation of an Event that Follows Given Biasness
+
+Problem Statement:
+The task requires creating a program that simulates an event with given probabilities for different outcomes. This is similar to simulating events like rolling a biased dice or flipping a biased coin.
+
+Solution Steps:
+1. Initialization and Probability Validation:
+   - It start by creating a class called `EventSimulation` to encapsulate the simulation logic. The class accepts a dictionary of outcome probabilities during initialization.
+   - The probabilities are normalized to ensure they sum up to approximately 1. It raise a `ValueError` if the probabilities are not in the valid range [0, 1] or if they don't sum up to approximately 1.
+
+2. Simulation of Events:
+   - The `simulate_event` method is used to simulate a single event outcome based on the normalized probabilities.
+   - It generate a random number between 0 and 1 and select an outcome based on the cumulative probability distribution.
+
+3. Simulating Multiple Occurrences:
+   - The `simulate_multiple_occurrences` method simulates a given number of event occurrences. It also raise a `ValueError` if the number of occurrences is not a positive integer.
+   - During the simulation, It maintain a count of each outcome.
+
+4. Printing Outcome Counts:
+   - The `print_outcome_counts` method is responsible for printing the counts of each outcome after the simulation.
+
+5. Testing and Usage:
+   - To ensure the correctness of the `EventSimulation` class, It provide a set of test cases. These tests cover various scenarios, including valid probabilities (both integer and float), negative `num_occurrences`, and zero `num_occurrences`. We also verify that the outcome counts sum up to the expected value within a delta.
+
+6. Additional Test Cases:
+   - For thorough testing, It added extra test cases in the `test_event_simulator.py` file. These cases include scenarios with negative probabilities and probabilities that sum to values higher than 1, which test the error handling of the class.
+
+7. Documentation:
+   - It have added docstrings to the class and its methods to describe their purpose, arguments, and potential exceptions.
+
+8. Modular and Readable Code:
+   - The code is well-structured and follows best coding practices, making it easy to understand and maintain.
+
+9. Flexibility:
+   - The class can handle various scenarios, including events with different probabilities and positive `num_occurrences`.
+
+10. Error Handling:
+    - It have implemented error handling to ensure that invalid inputs are caught and appropriate exceptions are raised.
+
+11. Normalization:
+    - The probabilities are normalized, ensuring that they are within the valid range of [0, 1] and sum up to approximately 1.
+
+12. Edge Cases:
+    - It have tested edge cases, such as negative probabilities and probabilities that sum to values higher than 1.
+
+13. Testing Coverage:
+    - The test cases are comprehensive and cover different scenarios to verify the correctness and robustness of the code.
+
+14. Unit Testing:
+    - We have used the `unittest` framework for unit testing, ensuring that the code behaves as expected in various scenarios.
+
+15. Flexibility for Future Changes:
+    - The class can easily accommodate additional features or changes for future requirements.
+
+
+This solution addresses Task 1 by providing a versatile and robust implementation for simulating events with given biasness. It adheres to best coding practices and offers extensive testing to ensure reliability.
